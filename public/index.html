@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0070f3">
+    <meta name="description" content="Frontend Developer Portafolio">
+    <link rel="stylesheet" href="build/tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Mi Portafolio</title>
+</head>
+<body class="font-sans text-gray-900 dark:text-white bg-white dark:bg-dark-background transition-colors duration-300">
+    
+    <!-- Modo oscuro gradientes fondos-->
+    <div class="fixed inset-0 -z-10 opacity-0 dark:opacity-100 transition-opacity duration-500 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10"></div>
+    </div>
+     
+    <!-- Cabecero -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 dark:bg-dark-background/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <span class="text-xl font-extrabold">Mi Portafolio</span>
+                    <span class="text-primary text-2xl ml-1">●</span>
+                </div>
+                <ul class="flex space-x-8">
+                     <li>
+                        <a href="#features" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Showcase</a>
+                    </li>
+                     <li>
+                        <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Sobre mi</a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Habilidades</a>
+                    </li>
+                     <li>
+                        <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Proyectos</a>
+                    </li>
+                     <li>
+                        <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Contactame</a>
+                    </li>
+                </ul>
+                <!--Icono Luna DarkMode-->
+                <div class="flex items-center space-x-4">
+                    <button id="themeToggle" class="">
+                        <i class="fa-solid fa-moon text-gray-600 dark:text-gray-400"></i>
+                    </button>
+                <!--Menu desplegable icono-->
+                    <button class="md:hidden p-2" id="menuToggle">
+                        <div class="w-6 h-5 flex flex-col justify-between">
+                            <span class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"></span>
+                            <span class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"></span>
+                            <span class="w-full h-0.5 bg-gray-600 dark:bg-gray-400 transition-all"></span>
+                        </div>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!--Introducción-->
+    <section id="hero" class="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-6xl font-bold mb-6">
+                    Portafolio <span class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Frontend</span> de Ingeniero Multimedia
+                </h1>
+                <p class="text-2xl text-gray-600 dark:text-gray-400 mb-8">
+                    Creando <strong>aplicaciones web de alta calidad</strong> con herramientas modernas para dar buenas experiencias de usuario.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="#projects" class="px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-300/30 dark:hove:shadow-blue-500/20 shadow-blue-200/20 dark:shadow-blue-700/10">
+                        Ver Proyectos
+                    </a>
+                    <a href="#about" class="px-8 py-3 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-900 dark:border-white transition-colors">Conoce más</a>
+                </div>
+                <div class="bg-gray-100 dark:bg-dark-background-secondary rounded-lg overflow-hidden shadow-lg max-w-2xl mx-auto" id="terminal-container">
+                    <div class="flex items-center space-x-2 p-3 bg-gray-200 dark:bg-dark-background">
+                        <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                        <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                    </div>
+                    <div class="p-6 font-mono terminal-content">
+                        <span class="text-green-500">$</span> <span class="command-text text-gray-900 dark:text-white">test</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Secciones Página-->
+   <section id="features" class="py-24 bg-gray-50 dark:bg-dark-background-secondary  translate-y-4 transition-all duration-500">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-4">¿Que puedes encontrar en esta página?</h2>
+            <p class="text-xl text-gray-600 dark:text-gray-400 text-center mb-16">
+            Proyectos centrados en el diseño, usabilidad y funcionalidad.
+            </p>
+
+            <div class="grid grid-cols-4 gap-8">
+            <!--Primer Apartado Features-->
+                <div class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-paintbrush text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Diseño UI Moderno</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Diseño de interfaces centradas en el usuario, combinando estética moderna con estructuras funcionales. </p>
+                </div>
+                <!--Segundo Apartado Features-->
+                <div class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-code text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Codigo Estructurado</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Componentes organizados siguiendo buenas prácticas y estándares modernos, asegurando mantenibilidad y facilidad de colaboración en proyectos a largo plazo.</p>
+                </div>
+                <!--Tercero Apartado Features-->
+                <div class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-arrow-pointer text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Interactividad</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Experiencias web que responden de forma inmediata y fluida a la acción del usuario.</p>
+                </div>
+                <!--Cuarto Apartado Features-->
+                <div class="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-mobile text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Diseños Responsivos</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Adaptación fluida en diferentes dispositivos y tamaños de pantalla, garantizando una experiencia de usuario coherente en móviles, tablets y escritorios.</p>
+                </div>
+            </div>
+        </div>
+   </section>
+
+   <!--Sobre mi-->
+   <section id="about" class="py-24 translate-y-4 transition-all duration-500">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Sobre mí</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-400 mb-6">
+                        Soy un Ingeniero Multimedia con competencias en la programación enfocada al FrontEnd, modelado en 3D y videojuegos. 
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">
+                        Mi pasión por el ambito multimedia me ha permitido
+                        desarrollar habilidades en programación FrontEnd, videojuegos,
+                        dirección creativa de proyectos audiovisuales y utilizar diferentes
+                        programas de Adobe en diseño o edicón de videos.
+                    </p>
+                </div>
+            </div>
+        </div>
+   </section>
+
+      
+</body>
+
+</html>
