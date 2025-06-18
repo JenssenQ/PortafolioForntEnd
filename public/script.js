@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const commandSpan = document.querySelector('.command-text');
 
     if(terminalContainer && terminalContent && commandSpan) {
-        const  commandText = "La mamá de Kevin que rico, y doña Andrea tambien.";
+        const  commandText = "Apasionado por crear experiencias digitales con propósito, detalle y calidad. Cada línea de código es un paso hacia soluciones funcionales y visualmente impactantes.";
         let i = 0;
         const typeCommand = () => {
             if(i < commandText.length){
